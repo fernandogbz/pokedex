@@ -51,3 +51,10 @@ input {
   font-size: 18px;
   font-weight: 500;
 }
+
+.poke-types div {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px dashed black;
+}
