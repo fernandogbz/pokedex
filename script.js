@@ -35,3 +35,12 @@ const searchPokemon = event => {
 }
 
 
+const renderPokemonData = data => {
+  const sprite = data.sprites.front_default;
+  const { stats, types } = data;
+  
+  pokeName.textContent = data.name;
+  pokeImg.setAttribute('src', sprite);
+  pokeId.textContent = `N° ${data.id}`;
+  setCardColor(types);
+}
