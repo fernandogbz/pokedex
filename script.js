@@ -32,6 +32,7 @@ const searchPokemon = event => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${value.toLowerCase()}`)
     .then(data => data.json())
     .then(response => renderPokemonData(response))
+    .catch(err => renderNotFound())
 }
 
 
@@ -51,7 +52,7 @@ const setCardColor = types => {
   colorOne = typeColors[types[0].type.name];
   colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
   pokeImg.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
-  pokeImg.style.backgroundSize = '5px 5px';
+  pokeImg.style.backgroundSize = '4px 4px';
 }
 
 const renderPokemonTypes = types => {
@@ -76,4 +77,13 @@ const renderPokemonStats = stats => {
     statElement.appendChild(statElementAmount);
     pokeStats.appendChild(statElement);
   })
+}
+
+const renderNotFound = () => {
+  pokeName.textContent = '404 Not found';
+  pokeImg.setAttribute('src', 'poke-shadow.png');
+  pokeImg.style.background = '#fff';
+  pokeTypes.innerHTML = '';
+  pokeStats.innerHTML = '';
+  pokeId.innerHTML = '';
 }
