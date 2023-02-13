@@ -44,6 +44,7 @@ const renderPokemonData = data => {
   pokeId.textContent = `N° ${data.id}`;
   setCardColor(types);
   renderPokemonTypes(types);
+  renderPokemonStats(stats);
 }
 
 const setCardColor = types => {
@@ -60,5 +61,19 @@ const renderPokemonTypes = types => {
     typeTextElement.style.color = typeColors[type.type.name];
     typeTextElement.textContent = type.type.name;
     pokeTypes.appendChild(typeTextElement);
+  })
+}
+
+const renderPokemonStats = stats => {
+  pokeStats.innerHTML = '';
+  stats.forEach(stat => {
+    const statElement = document.createElement("div");
+    const statElementName = document.createElement("div");
+    const statElementAmount = document.createElement("div");
+    statElementName.textContent = stat.stat.name;
+    statElementAmount.textContent = stat.base_stat;
+    statElement.appendChild(statElementName);
+    statElement.appendChild(statElementAmount);
+    pokeStats.appendChild(statElement);
   })
 }
