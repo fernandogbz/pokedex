@@ -3,3 +3,7 @@ form {
   margin: 20px auto;
 }
 
+input {
+  width: 100%;
+  padding: 10px;
+}
