@@ -58,3 +58,8 @@ input {
   border-radius: 5px;
   border: 1px dashed black;
 }
+
+.poke-img {
+  width: 200px;
+  border-radius: 50%;
+}
