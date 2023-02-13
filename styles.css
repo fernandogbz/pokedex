@@ -36,3 +36,9 @@ input {
   top: 10px;
   z-index: -1;
 }
+
+.img-container {
+  position: relative;
+  width: 180px;
+  margin: 10px auto;
+}
