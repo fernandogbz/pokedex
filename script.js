@@ -44,3 +44,10 @@ const renderPokemonData = data => {
   pokeId.textContent = `N° ${data.id}`;
   setCardColor(types);
 }
+
+const setCardColor = types => {
+  colorOne = typeColors[types[0].type.name];
+  colorTwo = types[1] ? typeColors[types[1].type.name] : typeColors.default;
+  pokeImg.style.background = `radial-gradient(${colorTwo} 33%, ${colorOne} 33%)`;
+  pokeImg.style.backgroundSize = '5px 5px';
+}
