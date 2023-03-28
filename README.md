@@ -4,4 +4,5 @@ This project was made by Fernando Jiménez, using only HTML5, CSS, JavaScript an
 <br>
 Link: https://fernandogbz.github.io/pokedex/
 <br>
+<br>
 ![pokedex](https://user-images.githubusercontent.com/112293116/228218362-fc00a40d-4ddb-4cdc-8df4-7457077fe73f.png)
